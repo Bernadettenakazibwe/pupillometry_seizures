@@ -6,10 +6,6 @@ Epilepsy is a neurological disorder characterized by sudden, recurrent seizures 
 ## Motivation  
 Caregivers and patients often lack affordable, easy-to-use tools for continuous seizure monitoring at home. Pupillary changes are closely tied to autonomic nervous system activity (Loddenkemper et al., 2012), and prior research shows that seizures can trigger rapid or asymmetric pupil dilation (Browne & Penry, 2019). By leveraging only a webcam and open-source software, our system aims to bridge this gap and deliver an accessible seizure-alert tool.
 
-## Related Work  
-- **Loddenkemper et al. (2012)** found that pupil dilation often precedes visible seizure onset, suggesting autonomic markers can serve as early warning signs.  
-- **Browne & Penry (2019)** documented that focal seizures produce characteristic anisocoria (unequal pupil sizes).  
-- **Yoon et al. (2021)** used computer vision to track pupil dynamics in real time, laying groundwork for camera-based seizure monitoring.
 
 ## System Architecture  
 The software follows a **modular pipeline** of five stages:  
@@ -30,9 +26,6 @@ The software follows a **modular pipeline** of five stages:
 3. **Anomaly Logic:** Tuned dilation and asymmetry thresholds, added persistence check.  
 4. **User Feedback:** Integrated text-to-speech and real-time display of zoomed eye crops.  
 5. **Testing & Logging:** Recorded sessions under varied lighting to adjust parameters and ensure stability.
-
-## Discussion  
-The proof-of-concept successfully flags sustained, significant pupil dilations that align with documented seizure markers (Loddenkemper et al., 2012). Post-session plots (e.g. shaded alert regions over smoothed pupil-size curves) confirm that only clinically relevant events trigger an alarm. However, further **clinical validation**—comparing alerts to concurrent EEG—will be needed to quantify sensitivity and specificity before real-world deployment.
 
 
 ## Usage Instructions
@@ -101,11 +94,5 @@ Follow these steps to set up and run the seizure detection system on your own co
 This project demonstrates a low-cost, non-invasive method for early seizure detection using only a webcam and open-source tools. By calibrating to each user, smoothing out noise, and applying medically informed thresholds, the system provides a responsive alert mechanism. Future work will focus on large-scale clinical testing, integration with cloud dashboards, and potential machine-learning enhancements for even greater accuracy.
 
 
-
-## References
-
-* Browne TR, Penry JK. Autonomic nervous system and seizures: Clinical relevance of pupillary changes. *Epilepsia*. 2019;60(5):971–976.
-* Loddenkemper T, Zubcevik N, Gerrard JL, et al. Autonomic changes as a biomarker of seizure onset. *Epilepsy & Behavior*. 2012;25(3):334–339.
-* Yoon D, Kim H, Lee J, et al. Eye-tracking-based pupillometry for seizure monitoring. *Sensors*. 2021;21(4):1213.
 
 
