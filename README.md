@@ -79,10 +79,48 @@ Follow these steps to set up and run the seizure detection system on your own co
 
    * After session,  the gragh with details of the session will appear and you have the option to save it or not. Review `session_log.csv` for frame-by-frame data.
      
+8. ## Example of gragh of the trial_sessions:
+   
+   ![Pupil Size Over Time with Seizure Alerts](Figure_2.png)
 
+   
+This graph visualizes the smoothed pupil size changes over time for both the left and right pupils, measured as a multiple of baseline (1.0 = normal). It illustrates how the pupil size varies and highlights suspected seizure events based on abnormal fluctuations.
 
+### Key Features:
+### X-Axis (Time in seconds):
 
+Represents the duration of the observation period (~40 seconds).
+
+### Y-Axis (Smoothed Pupil Size × Baseline):
+
+Indicates relative changes in pupil diameter.
+
+Values above 1.0 suggest pupil dilation; values below 1.0 indicate constriction.
+
+### Blue Line (Left Pupil) & Orange Line (Right Pupil):
+
+Show real-time smoothed pupil measurements for each eye.
+
+Small oscillations are normal, while sudden large spikes or dips may indicate neurological anomalies.
+
+### Red Shaded Areas:
+
+Mark detected seizure alert windows where abnormal pupil activity was identified.
+
+These regions typically correspond to rapid, asymmetric changes or irregular spikes in pupil size.
+
+### Purpose of the Visualization:
+This graph helps clinicians or researchers:
+
+Quickly detect when a seizure-like event occurred.
+
+Compare behavior between left and right pupils for asymmetry.
+
+Understand the temporal pattern and intensity of pupil changes during seizure onset.
+
+   
 ## Conclusion  
+
 This project demonstrates a low-cost, non-invasive method for early seizure detection using only a webcam and open-source tools. By calibrating to each user, smoothing out noise, and applying medically informed thresholds, the system provides a responsive alert mechanism. Future work will focus on large-scale clinical testing, integration with cloud dashboards, and potential machine-learning enhancements for even greater accuracy.
 
 
