@@ -61,32 +61,24 @@ Follow these steps to set up and run the seizure detection system on your own co
    [http://dlib.net/files/shape\_predictor\_68\_face\_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
    Extract the `.dat` file and place it in the project root alongside `seizure_monitor.py`.
 
-6. **Run the calibration**:
-
-   ```bash
-   python seizure_monitor.py --calibrate
-   ```
-
-   * Follow the voice and on-screen prompts to look straight at the camera. 30 samples will be collected to establish your baseline.
-
-7. **Start monitoring**:
+6. **Run the calibration and start monitoring**:
 
    ```bash
    python seizure_monitor.py
    ```
 
+   * Follow the voice and on-screen prompts to look straight at the camera. 30 samples will be collected to establish your baseline.
+
+* During Start monitoring**:
+
    * The system will open a live video window along with zoomed eye views.
    * Watch for voice and on-screen alerts if a possible seizure event is detected.
    * Press **ESC** to end the session.
 
-8. **Review session logs and graphs**:
+7. **Review session logs and graphs**:
 
-   * After closing, review `session_log.csv` for frame-by-frame data.
-   * To visualize results, run the provided plotting script:
-
-   ```bash
-   python plot_results.py
-   ```
+   * After session,  the gragh with details of the session will appear and you have the option to save it or not. Review `session_log.csv` for frame-by-frame data.
+     
 
 
 
